@@ -318,14 +318,18 @@ body {
 .coin {
     position: absolute;
     bottom: -50px;
-    
     font-size: 32px; 
     
-    color: rgba(46, 204, 113, 0.2); 
+    
+    color: #FFD700; 
+    
     font-weight: bold;
     user-select: none;
     animation: floatUp 12s linear infinite;
-    text-shadow: 0 0 10px rgba(46, 204, 113, 0.1); 
+    
+   
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6), 
+                 0 0 20px rgba(218, 165, 32, 0.4); 
 }
 @keyframes floatUp {
     0% {
