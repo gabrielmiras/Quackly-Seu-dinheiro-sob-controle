@@ -20,7 +20,7 @@ body {
     overflow-x: hidden;
 }
 
-/* NAVBAR PILL */
+/* NAVBAR */
 .navbar-quackly {
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(12px);
@@ -72,7 +72,7 @@ body {
     transition: 0.3s;
 }
 
-/* HERO SECTION & MASCOT */
+
 .hero-section {
     padding: 100px 0 60px;
 }
@@ -82,9 +82,9 @@ body {
 }
 
 .duck-illustration {
-    width: 280px; /* Ajuste conforme necessário */
+    width: 280px; 
     height: auto;
-    mix-blend-mode: multiply; /* Para imagem com fundo branco */
+    mix-blend-mode: multiply; 
     filter: contrast(1.1);
 }
 
@@ -104,7 +104,7 @@ body {
 
 
 
-/* BUTTONS */
+
 .btn-primary-custom {
     background-color: #fff;
     color: #000;
@@ -123,7 +123,7 @@ body {
     border: 1px solid var(--border-color);
 }
 
-/* FEATURE CARDS */
+
 .feature-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -138,7 +138,7 @@ body {
     border-color: #444;
 }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE PARA APARELHOS , TELEFONE , TABLET E PC */
 @media (max-width: 991px) {
     .navbar-quackly {
         border-radius: 25px;
@@ -154,8 +154,7 @@ body {
 
 
 
-/* Card */
-/* Estilos da Seção de Transações (Corrigido) */
+
 .transaction-section {
     padding: 100px 0;
     background-color: #000;
@@ -164,14 +163,14 @@ body {
 .image-wrapper {
     position: relative;
     max-width: 450px;
-    margin-right: auto; /* Move o wrapper para a esquerda */
+    margin-right: auto; 
     margin-left: 0;
 }
 
 .main-duck-img {
     width: 100%;
     border-radius: 40px;
-    /* Fundo sólido para esconder o xadrez da imagem */
+   
     background-color: #1a1a1a; 
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     display: block;
@@ -181,7 +180,7 @@ body {
 
 .floating-card {
     position: absolute;
-    background: rgba(30, 30, 30, 0.9); /* Fundo mais sólido para nitidez */
+    background: rgba(30, 30, 30, 0.9); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -191,11 +190,11 @@ body {
     align-items: center;
     width: 260px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    z-index: 5; /* Garante que fique acima da imagem */
+    z-index: 5; 
     animation: float 4s ease-in-out infinite;
 }
 
-/* Posições ajustadas para o lado */
+
 .card-1 { top: 15%; right: -100px; animation-delay: 0s; }
 .card-2 { top: 45%; right: -120px; animation-delay: 1s; }
 .card-3 { top: 75%; right: -100px; animation-delay: 2s; }
@@ -279,7 +278,7 @@ body {
     background: #f0f0f0;
 }
 
-/* Ajuste Mobile */
+/* Mais ajudsre de responsividade para Mobile */
 @media (max-width: 991px) {
     .image-wrapper {
         margin: 0 auto;
