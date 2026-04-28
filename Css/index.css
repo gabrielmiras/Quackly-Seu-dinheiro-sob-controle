@@ -27,7 +27,7 @@ body {
     -webkit-backdrop-filter: blur(12px);
     border-radius: 100px;    
     border: 1px solid var(--border-color);  
-    padding: 8px 24px;      
+    padding: 10px 30px;      
     max-width: 850px;        
     width: 95%;          
     margin: 20px auto;       
