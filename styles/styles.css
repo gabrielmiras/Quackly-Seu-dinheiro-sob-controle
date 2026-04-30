@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --bg-dark: #000000;
-    --bg-card: #0d0d0d;
+    --bg-dark: #192841;
+    --bg-card: #23385d;
     --text-primary: #ffffff;
-    --text-secondary: #888888;
+    --text-secondary: #EBECF0;
     --accent-color: #ffffff;
-    --border-color: #222222;
+    --border-color: #EBECF0;
     --gradient-primary: linear-gradient(135deg, #ffffff 0%, #666666 100%);
 }
 
@@ -40,8 +40,9 @@ body {
     font-weight: 700;
     display: flex;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     color: #fff !important;
+    margin-right: -10px;
 }
 
 .navbar-logo {
@@ -53,13 +54,14 @@ body {
 
 .nav-link {
     color: var(--text-secondary) !important;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 500;
     margin: 0 12px;
+    margin-left: 0px;
 }
 
 .nav-link:hover {
-    color: var(--text-primary) !important;
+    color: #FFCB61 !important;
 }
 
 .btn-entrar {
@@ -201,7 +203,7 @@ body {
     background: rgba(30, 30, 30, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid (255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 12px 16px;
     display: flex;
@@ -361,13 +363,18 @@ body {
     overflow: hidden;
 }
 
+/*COR DAS MOEDAS DE FUNDO*/
+.cifra{
+    color: #FFCB61;
+    font-weight: bolder;
+}
 .coin {
     position: absolute;
     top: -50px;
     font-size: 32px;
 
 
-    color: #FFD700;
+    color: #FFCB61;
 
     font-weight: bold;
     user-select: none;
@@ -404,10 +411,10 @@ body {
 
 /*PREÇOS E PLANOS (SÓ EXEMPLO, DA PRA TIRAR) */
 
-
+/*COR DE DESTAQUE DO SITE*/
 :root {
-    --primary: #00FF00;
-    --primary-dark: #00DD00;
+    --primary: #FFCB61;
+    --primary-dark: #FFCB61;
     --background: #0a0a0a;
     --border: #333333;
  
@@ -416,7 +423,6 @@ body {
 
 .pricing {
     padding: 5rem 0;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .pricing h2 {
@@ -438,13 +444,12 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
-    background-color: rgba(0, 0, 0, 0.4);
     ;
 }
 
 .pricing-card {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 2px solid var(--border);
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
     border-radius: 1rem;
     padding: 2rem;
     display: flex;
@@ -554,7 +559,7 @@ body {
 .btn-secondary.btn-block {
     background-color: transparent;
     color: var(--foreground);
-    border: 2px solid var(--border);
+    border: 2px solid var(--border-color);
 }
 
 .btn-secondary.btn-block:hover {
