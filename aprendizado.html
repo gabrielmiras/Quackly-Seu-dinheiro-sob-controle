@@ -1,53 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Aprendizado - Dashboard</title>
+    <title>Aprendizado - Quackly</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles/aprendizado.css">
     <link rel="icon" type="image/png" href="images/quackly_logo.png">
 </head>
-
 <body>
+    
+    <!-- GATILHO SEM JS: Checkbox oculto para controlar a sidebar -->
+    <input type="checkbox" id="sidebar-toggle">
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-item">
-            <div class="sidebar-header">
-                <i class="bi bi-book"></i>
-                <span><a href="aprendizado.html" style="color: inherit; text-decoration: none;">Meu
-                        aprendizado</a></span>
-            </div>
-            <ul class="sidebar-links">
-                <li class="active"><a href="#cursos">Cursos</a></li>
-                <li><a href="#questionarios">Questionários</a></li>
+    <!-- BOTÃO HAMBÚRGUER: Visível apenas no mobile -->
+    <label for="sidebar-toggle" class="hamburger-menu">
+        <i class="bi bi-list"></i>
+    </label>
+
+    <!-- BARRA LATERAL (SIDEBAR) -->
+    <aside class="sidebar-container">
+        <div class="sidebar-header">
+            <span class="sidebar-title"></span>
+            <!-- Botão de fechar visível apenas no mobile -->
+            <label for="sidebar-toggle" class="close-menu">
+                <i class="bi bi-x-lg"></i>
+            </label>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><b>Meu Aprendizado</b></a></li>
+                    <li style="margin-left: 24px;"><a href="aprendizado.html#cursos"><i class="bi bi-book"></i>Cursos</a></li>
+                    <li style="margin-left: 24px;"><a href="aprendizado.html#questionarios"><i class="bi bi-journals"></i></i>Questionarios</a></li>
+                <li><b>Área de Gestão</b></a></li>
+                    <li style="margin-left: 24px;"><a href="gestao.html"><i class="bi bi-pie-chart"></i> Gerenciamento</a></li>
+                    <li style="margin-left: 24px;"><a href="gestao.html#investimentos"><i class="bi bi-graph-up-arrow"></i>Investimentos</a></li>
+                    <li style="margin-left: 24px;"><a href="gestao.html#metas"><i class="bi bi-trophy"></i> Metas</a></li>
             </ul>
-        </div>
+        </nav>
+    </aside>
 
-        <div class="sidebar-item">
-            <div class="sidebar-header">
-                <i class="bi bi-bar-chart"></i>
-                <span><a href="gestao.html" style="color: inherit; text-decoration: none;">Gestão</a></span>
-            </div>
-            <ul class="sidebar-links">
-                <li><a href="gestao.html#gerenciamento">Gerenciamento</a></li>
-                <li><a href="gestao.html#investimentos">Investimentos</a></li>
-                <li><a href="gestao.html#metas">Metas</a></li>
-            </ul>
-        </div>
-
-        <div class="sidebar-footer">
-            <i class="bi bi-gear"></i>
-            <span>Configurações</span>
-        </div>
-    </div>
-
-    <!-- Main Content -->
+    <!-- CONTEÚDO PRINCIPAL -->
     <div class="main-container">
-        <!-- Header -->
         <div class="header">
             <div class="logo-placeholder">
                 <img src="images/quackly_logo.png" alt="Logo Pato">
@@ -59,104 +54,179 @@
                 </div>
             </div>
         </div>
-
         <!-- Content Area -->
-        <div class="content">
+            <div class="content">
 
-            <section id="cursos" class="section">
-                <!-- Barra de Progresso -->
-                <div class="progress-container">
-                    <div class="progress-track">
-                        <div class="progress-bar-fill"></div>
-                        <img src="images/quacklylogo2.png" class="duck-on-progress"
-                            alt="Pato Progresso">
+                <section id="cursos" class="section">
+                    <!-- Container posicionado para segurar as imagens por cima da barra -->
+                    <div class="custom-progress-wrapper" style="position: relative; margin-top: 35px; margin-bottom: 15px;">
+                        
+                        <!-- IMAGEM 1: Fica exatamente em cima do fim da barra percorrida (Mude o left para a mesma % do preenchimento) -->
+                        <img src="images/quacklylogo2.png" class="progress-duck-avatar" alt="Pato Progresso" 
+                            style="position: absolute; left: 27%; top: -50px; transform: translateX(-50%); width: 55px; height: 55px; z-index: 10;">
 
-                        <div class="progress-icons">
-                            <div style="width: 45%;"></div> <!-- Spacer -->
-                            <img src="images/coinquackly.png" class="progress-icon" alt="medal">
-                            <img src="images/coinquackly.png" class="progress-icon" alt="medal">
-                            <img src="images/coinquackly.png" class="progress-icon" alt="medal">
-                            <img src="images/coinquackly.png" class="progress-icon" alt="medal">
+                        <!-- IMAGEM 2: Fica em cima do fim da barra total (100%) -->
+                        <img src="images/flagquackly.png" class="progress-final-flag" alt="Chegada" 
+                            style="position: absolute; right: -5px; top: -52px; width: 55px; height: 55px; z-index: 10;">
+
+                        <!-- Sua Barra de Progresso do Bootstrap -->
+                        <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100" style="height: 28px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 27%"></div>
                         </div>
-                        <img src="images/flagquackly.png" class="flag-icon" alt="Chegada">
                     </div>
-                    <div class="level-text">
-                        Seu nível atual: <span>Iniciante</span>, continue assim!
-                    </div>
-                    <div
-                        style="position: absolute; right: 30px; bottom: 30px; color: #888; font-size: 0.9rem; cursor: pointer;">
-                        Ver meu progresso
-                    </div>
-                </div>
 
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                    <h2 class="section-title">Cursos disponíveis</h2>
-                   
-                </div>
+                    <div class="level-text" style="margin-bottom: 10px;">
+                        Seu nível atual: <b style="color: #c79633;">Iniciante</b>, continue assim!
+                    </div>
 
-                <!-- Grid de Cursos -->
-                <div class="courses-grid">
-                    <!-- Curso 1 -->
-                    <div class="course-card">
-                        <img src="images/gestaofinanceira.png"
-                            class="course-image" alt="Finanças">
-                        <div class="course-content">
-                            <h3 class="course-title">Finanças Pessoais e Planejamento</h3>
-                            <p class="course-description">
-                                Aprenda a dominar seu dinheiro, criar orçamentos inteligentes e entender o mundo dos
-                                investimentos básicos para garantir seu futuro financeiro.
-                            </p>
-                            <div class="course-info">
-                                <div class="course-meta">
-                                    <i class="fas fa-calendar-alt"></i> 25 horas - Iniciante
-                                </div>
-                                <div class="btn-course">
-                                    <button class="btn btn-primary">Inscrever-se</button>
-                                </div>
-                                <div class="qp-badge">
-                                    <img src="images/coinquackly.png" width="20" alt="medal"> +20 QP
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h2 class="section-title">Cursos disponíveis</h2>
+                    </div>
+
+                    <!-- Grid de Cursos -->
+                    <div class="courses-grid">
+                    <p class="section-subtitle">Incremente seu conhecimento.</p>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+    
+                            <!-- CARD 1 -->
+                            <div class="col">
+                                <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden" style="background-color: #e5e5e0;">
+                                    <img src="images/gestaofinanceira.png" class="card-img-top object-fit-cover" alt="Negócios" style="height: 200px;">
+                                    <div class="card-body p-4 d-flex flex-column">
+                                        <h3 class="card-title fw-bold text-dark mb-3" style="font-size: 1.35rem;">
+                                            Finanças Pessoais e Planejamento
+                                        </h3>
+                                        <p class="card-text text-secondary lh-base mb-4 flex-grow-1" style="font-size: 0.95rem;">
+                                            Aprenda a dominar seu dinheiro, criar orçamentos inteligentes e entender o mundo dos investimentos básicos para garantir seu futuro financeiro.
+                                        </p>
+                                        <hr class="text-black-50 my-4 opacity-25">
+                                        <div class="d-flex align-items-center justify-content-between text-secondary" style="font-size: 0.9rem;">
+                                            <div class="d-flex align-items-center justify-content-between text-secondary" style="font-size: 0.9rem;">
+                                                <button class="btn btn-primary fw-medium px-4 py-2 rounded-3 text-nowrap">
+                                                    Inscrever-se
+                                                </button>
+                                                <div class="text-muted text-nowrap mx-3 flex-grow-1">
+                                                    25 horas
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Curso 2 -->
-                    <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            class="course-image" alt="Negócios">
-                        <div class="course-content">
-                            <h3 class="course-title">Gestão Financeira para Negócios</h3>
-                            <p class="course-description">
-                                Entenda o fluxo de caixa, análise de demonstrativos financeiros e estratégias de redução
-                                de custos para tornar qualquer empresa mais lucrativa e sustentável.
-                            </p>
-                            <div class="course-info">
-                                <div class="course-meta">
-                                    <i class="fas fa-calendar-alt"></i> 15 horas - Iniciante
-                                </div>
-                                <div class="btn-course">
-                                    <button class="btn btn-primary">Inscrever-se</button>
-                                </div>
-                                <div class="qp-badge">
-                                    <img src="images/coinquackly.png" width="20" alt="medal"> +10 QP
+                            <!-- CARD 2 -->
+                            <div class="col">
+                                <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden" style="background-color: #e5e5e0;">
+                                    <img src="images/notebookCurso.png" class="card-img-top object-fit-cover" alt="Negócios" style="height: 200px;">
+                                    <div class="card-body p-4 d-flex flex-column">
+                                        <h3 class="card-title fw-bold text-dark mb-3" style="font-size: 1.35rem;">
+                                            Gestão Financeira para Negócios
+                                        </h3>
+                                        <p class="card-text text-secondary lh-base mb-4 flex-grow-1" style="font-size: 0.95rem;">
+                                            Entenda o fluxo de caixa, análise de demonstrativos financeiros e estratégias de redução de custos para tornar qualquer empresa mais lucrativa e sustentável.
+                                        </p>
+                                        <hr class="text-black-50 my-4 opacity-25">
+                                        <div class="d-flex align-items-center justify-content-between text-secondary" style="font-size: 0.9rem;">
+                                            <div class="d-flex align-items-center justify-content-between text-secondary" style="font-size: 0.9rem;">
+                                                <button class="btn btn-primary fw-medium px-4 py-2 rounded-3 text-nowrap">
+                                                    Inscrever-se
+                                                </button>
+                                                <div class="text-muted text-nowrap mx-3 flex-grow-1">
+                                                    25 horas
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section id="questionarios" class="section">
-                <h1 class="section-title">Questionários</h1>
-                <p class="section-subtitle">Teste seus conhecimentos</p>
-                <div class="placeholder-content">
-                    Área de Questionários 
-                </div>
-            </section>
+                <section id="questionarios" class="section">
+                    <h1 class="section-title">Questionários</h1>
+                    <p class="section-subtitle">Teste seus conhecimentos.</p>
+                    <!-- Grid de questionarios -->
+                    <div class="courses-grid">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+    
+                            <!-- CARD 1 -->
+                            <div class="col">
+                                <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden" style="background-color: #e5e5e0;">
+                                    <div class="card-body p-4 d-flex flex-column">
+                                        <h3 class="card-title fw-bold text-dark mb-3" style="font-size: 1.35rem;">
+                                            Dominando suas Finanças Pessoais
+                                        </h3>
+                                        <p class="card-text text-secondary lh-base mb-4 flex-grow-1" style="font-size: 0.95rem;">
+                                            Teste seus conhecimentos sobre planejamento financeiro, investimentos e controle de gastos. Responda às perguntas para avaliar sua saúde financeira e ganhe recompensas ao concluir o questionário!
+                                        </p>
+                                        <hr class="text-black-50 my-4 opacity-25">
+                                        <div class="d-flex align-items-center justify-content-between text-secondary" style="font-size: 0.9rem;">
+                                            <div class="d-flex align-items-center justify-content-between text-secondary" style="font-size: 0.9rem;">
+                                                <button class="btn btn-primary fw-medium px-4 py-2 rounded-3 text-nowrap">
+                                                    Inscrever-se
+                                                </button>
+                                                <div class="text-muted text-nowrap mx-3 flex-grow-1">
+                                                    15 questões
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CARD 2 -->
+                            <div class="col">
+                                <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden" style="background-color: #e5e5e0;">
+                                    <div class="card-body p-4 d-flex flex-column">
+                                        <h3 class="card-title fw-bold text-dark mb-3" style="font-size: 1.35rem;">
+                                            Desafio do Investidor Iniciante
+                                        </h3>
+                                        <p class="card-text text-secondary lh-base mb-4 flex-grow-1" style="font-size: 0.95rem;">
+                                            Descubra se você está pronto para fazer o seu dinheiro render. Entenda os conceitos básicos de renda fixa, renda variável e saiba como montar a sua primeira reserva de emergência de forma segura.
+                                        </p>
+                                        <hr class="text-black-50 my-4 opacity-25">
+                                        <div class="d-flex align-items-center justify-content-between text-secondary" style="font-size: 0.9rem;">
+                                            <div class="d-flex align-items-center justify-content-between text-secondary" style="font-size: 0.9rem;">
+                                                <button class="btn btn-primary fw-medium px-4 py-2 rounded-3 text-nowrap">
+                                                    Inscrever-se
+                                                </button>
+                                                <div class="text-muted text-nowrap mx-3 flex-grow-1">
+                                                    15 questões
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CARD 3 -->
+                            <div class="col">
+                                <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden" style="background-color: #e5e5e0;">
+                                    <div class="card-body p-4 d-flex flex-column">
+                                        <h3 class="card-title fw-bold text-dark mb-3" style="font-size: 1.35rem;">
+                                            Orçamento Inteligente e Consumo Consciente
+                                        </h3>
+                                        <p class="card-text text-secondary lh-base mb-4 flex-grow-1" style="font-size: 0.95rem;">
+                                            Você sabe para onde vai o seu dinheiro no fim do mês? Avalie seus hábitos de consumo, aprenda a identificar despesas desnecessárias e monte uma estratégia eficiente para sair das dívidas e poupar mais.
+                                        </p>
+                                        <hr class="text-black-50 my-4 opacity-25">
+                                        <div class="d-flex align-items-center justify-content-between text-secondary" style="font-size: 0.9rem;">
+                                            <div class="d-flex align-items-center justify-content-between text-secondary" style="font-size: 0.9rem;">
+                                                <button class="btn btn-primary fw-medium px-4 py-2 rounded-3 text-nowrap">
+                                                    Inscrever-se
+                                                </button>
+                                                <div class="text-muted text-nowrap mx-3 flex-grow-1">
+                                                    20 questões
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </section>
 
+            </div>
         </div>
     </div>
-
 </body>
-
 </html>
