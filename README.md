@@ -1,7 +1,7 @@
 # 🦆 Quackly
 
 > **Surpresas na fatura? Comigo, não!**  
-> O ecossistema multiplataforma que transforma o controle financeiro em uma jornada lúdica, intuitiva e direta ao ponto.
+
 
 ---
 
