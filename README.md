@@ -54,7 +54,7 @@ No escopo atual de desenvolvimento com foco em Front-end responsivo e acessível
 *   Joaquim Teixeira De Almeida
 *   Rafael Meneghin Reis
 
-**Orientador:** Prof. Jones Artur
-
 ---
+
+LINK DE ACESSO PARA OS FLUXOS DE TELA DO SITE FEITOS NO FIGMA : https://www.figma.com/design/OzdzRqZXIyB7M9IZzWPzQx/Quackly?node-id=0-1&t=sfNoMVqkKpPXkyM1-1
 
