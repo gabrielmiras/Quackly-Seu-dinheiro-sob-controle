@@ -31,7 +31,7 @@ No escopo atual de desenvolvimento com foco em Front-end responsivo e acessível
 *   **CSS3** (Estilização personalizada)
 *   **Bootstrap** (Componentes e responsividade para Desktops, Tablets e Smartphones)
 
-*(Preparado estruturalmente para futuras expansões, como integração com agentes de Inteligência Artificial e APIs especializadas de Open Finance).*
+*(Preparado estruturalmente para futuras expansões, como integração com agentes de Inteligência Artificial e APIs especializadas ).*
 
 ---
 
